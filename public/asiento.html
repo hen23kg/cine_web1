@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/haciendo.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<header>
+        <h1 class="logo">CINE-KALAF</h1>
+        <nav class="menu-container">
+            <ul class="menu">
+                <li><a href="./login.html"><i class="fas fa-user"></i></a></li>
+                <li><a href="menu.html"><i class="fas fa-utensils"></i></a></li>
+                <li><a href="peliculas.html"><i class="fas fa-film"></i></a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cinema">
+        <div class="movie-summary" id="movieSummary">
+            <!-- Resumen de la película y horario -->
+        </div>
+
+        <div class="Screen">PANTALLA</div>
+        <div class="map">
+            <div class="row">
+                <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+                <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+                <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+                <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+                <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+            </div>
+            <div class="row">
+                <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+                <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+                <div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div><div class="seat"></div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="seat"></div>
+                    <span>Disponible</span>
+                </div>
+                <div class="legend-item">
+                    <div class="seat selected"></div>
+                    <span>Seleccionado</span>
+                </div>
+                <div class="legend-item">
+                    <div class="seat occupied"></div>
+                    <span>Ocupado</span>
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div id="info">No hay asientos seleccionados</div>
+                <div id="total"></div>
+                <div class="btn">
+                    <a href="hora.html">Atrás</a>
+                    <a href="carrito.html" id="continueBtn" onclick="continueToCarrito()">Continuar al Carrito</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/haciento.js"></script>
+</body>
+</html>

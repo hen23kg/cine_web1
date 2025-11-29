@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="/public/css/carrito.css">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">CINE-KALAF</h1>
+        <nav class="menu-container">
+            <ul class="menu">
+                <li><a href="./login.html"><i class="fas fa-user"></i></a></li>
+                <li><a href="menu.html"><i class="fas fa-utensils"></i></a></li>
+                <li><a href="peliculas.html"><i class="fas fa-film"></i></a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+        <div class="cart-content">
+            <h1 class="cart-title">Carrito de Entradas</h1>
+            
+            <div id="cart-empty" class="cart-empty">
+                <div class="icon"><i class="fas fa-shopping-cart fa-4x"></i></div>
+                <h2>Tu carrito está vacío</h2>
+                <p>No has seleccionado ningún asiento aún.</p>
+                <a href="asiento.html" class="btn btn-primary" style="margin-top: 20px;">
+                    Seleccionar Asientos
+                </a>
+            </div>
+            
+            <div id="cart-items" class="cart-items">
+                <!-- Los items del carrito se cargarán aquí -->
+            </div>
+            
+            <div id="cart-summary" class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">Bs. 0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Servicio (10%):</span>
+                    <span id="servicio">Bs. 0.00</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total:</span>
+                    <span id="total">Bs. 0.00</span>
+                </div>
+            </div>
+            
+            <div class="actions" id="cart-actions">
+                <a href="asiento.html" class="btn btn-secondary">Modificar Asientos</a>
+                <a href="confirmacion.html" class="btn btn-primary" id="btn-pagar">Proceder al Pago</a>
+            </div>
+        </div>
+    </main>
+    <script src="/public/js/carrito.js"></script>
+</body>
+</html>

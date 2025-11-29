@@ -1,0 +1,146 @@
+/* peliculas.css */
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.movie-listings {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.movie-card {
+    display: flex;
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.movie-poster {
+    flex: 0 0 300px;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-info {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.movie-info h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.movie-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.movie-details {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.movie-details strong {
+    color: #fff;
+}
+
+.movie-showtimes {
+    flex: 0 0 250px;
+    padding: 25px;
+    background: #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.showtime-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.showtime-format {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.format-icon {
+    background: #444;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.time-button {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.time-button:hover {
+    background: #f40612;
+}
+
+.no-movies {
+    text-align: center;
+    color: #ccc;
+    font-size: 1.2rem;
+    padding: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .movie-card {
+        flex-direction: column;
+    }
+    
+    .movie-poster {
+        flex: 0 0 200px;
+    }
+    
+    .movie-showtimes {
+        flex: 0 0 auto;
+    }
+}

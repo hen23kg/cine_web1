@@ -1,0 +1,132 @@
+.movie-details {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+   display: flex;
+   gap: 30px;
+   align-items: flex-start;
+}
+
+.movie-poster {
+   flex: 0 0 300px;
+}
+
+.movie-poster img {
+   width: 100%;
+   border-radius: 10px;
+   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+
+.movie-info {
+   flex: 1;
+}
+
+.movie-title {
+   font-size: 2.5rem;
+   color: #E50914;
+   margin-bottom: 15px;
+}
+
+.movie-meta {
+   display: flex;
+   gap: 20px;
+   margin-bottom: 20px;
+   flex-wrap: wrap;
+}
+
+.rating-badge {
+   background-color: #d9534f;
+   color: white;
+   padding: 5px 10px;
+   border-radius: 5px;
+   font-weight: bold;
+}
+
+.synopsis {
+   margin-bottom: 30px;
+   line-height: 1.6;
+}
+
+.showtimes-section {
+   margin-top: 40px;
+}
+
+.showtimes-title {
+   font-size: 1.5rem;
+   margin-bottom: 20px;
+   color: #E50914;
+}
+
+.showtimes-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 15px;
+}
+
+.time-slot {
+   background: #222;
+   padding: 15px;
+   border-radius: 8px;
+   text-align: center;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   border: 2px solid transparent;
+}
+
+.time-slot:hover {
+   background: #333;
+   border-color: #E50914;
+}
+
+.time-slot.selected {
+   background: #E50914;
+   border-color: #E50914;
+}
+
+.time {
+   font-size: 1.2rem;
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+
+.format {
+   font-size: 0.9rem;
+   color: #ccc;
+}
+
+.continue-btn {
+   display: block;
+   width: 200px;
+   margin: 40px auto;
+   padding: 15px 30px;
+   background: #E50914;
+   color: white;
+   text-decoration: none;
+   text-align: center;
+   border-radius: 8px;
+   font-weight: bold;
+   font-size: 1.1rem;
+   transition: background 0.3s ease;
+}
+
+.continue-btn:hover {
+   background: #b8070f;
+}
+
+.continue-btn:disabled {
+   background: #666;
+   cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+   .movie-details {
+      flex-direction: column;
+   }
+   
+   .movie-poster {
+      flex: none;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+   }
+}
