@@ -1,16 +1,16 @@
 const apiData = {
-  "carousel": [
+    "carousel": [
     {
-      "img": "https://image.tmdb.org/t/p/original/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg",
-      "title": "Spider-Man: Across the Spider-Verse"
+      "img": "https://www.themoviedb.org/t/p/w1280/qbImUt1d3itXcB81BCItPZlfbyr.jpg",
+      "title": "One Piece Banner"
     },
     {
-      "img": "https://image.tmdb.org/t/p/original/8rpDcsfLJypbO6vREc0547OTqEv.jpg",
-      "title": "Avatar: The Way of Water"
+      "img": "https://www.themoviedb.org/t/p/w1280/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg" ,
+      "title": "Banner Película 1"
     },
     {
-      "img": "https://image.tmdb.org/t/p/original/ctMserH8g2SeOAnCw5cXjd4uzJw.jpg",
-      "title": "Barbie"
+      "img": "https://pbs.twimg.com/media/G4WyJUwbwAAxXH9.jpg",
+      "title": "Doctor Who Christmas Special 2026"
     }
   ],
   "cartelera": [
