@@ -1,11 +1,11 @@
 {
   "carousel": [
     {
-      "img": "https://cdn.discordapp.com/attachments/539935961652527105/1432763375598960650/IMG_9189.jpg",
+      "img": "https://www.themoviedb.org/t/p/w1280/qbImUt1d3itXcB81BCItPZlfbyr.jpg",
       "title": "One Piece Banner"
     },
     {
-      "img": "https://cdn.discordapp.com/attachments/539935961652527105/1433879483282096178/IMG_9266.jpg",
+      "img": "https://www.themoviedb.org/t/p/w1280/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg" ,
       "title": "Banner Película 1"
     },
     {
@@ -16,7 +16,7 @@
   "cartelera": [
     {
       "id": "1",
-      "titulo": "Nada es lo que parece 3",
+      "titulo": "DAMSIEL",
       "poster": "https://image.tmdb.org/t/p/w500/sMp34cNKjIb18UBOCoAv4DpCxwY.jpg",
       "sinopsis": "Los Cuatro Jinetes regresan para una nueva generación de magos, llevando la ilusión a nuevos extremos.",
       "duracion": 115,
@@ -56,19 +56,6 @@
       ]
     },
     {
-      "id": "4",
-      "titulo": "Marty Supreme",
-      "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1437815263864033420/MARTY_SUPREME_-_Payoff_Poster.jpg?ex=691b34d0&is=6919e350&hm=b1bae2442f9c65342648117a7a45f889b5ad2ec948c5e327cbc0295316b2b06a",
-      "sinopsis": "Una historia original ficticia inspirada en la vida del legendario y excéntrico campeón de tenis de mesa, Marty Reisman.",
-      "duracion": 110,
-      "genero": "Drama, Biografía",
-      "clasificacion": "+18",
-      "funciones": [
-        {"id": "4-1", "hora": "19:00"},
-        {"id": "4-2", "hora": "22:00"}
-      ]
-    },
-    {
       "id": "5",
       "titulo": "The Mummy (Reestreno)",
       "poster": "https://pbs.twimg.com/media/G475-JzXgAAawdu.jpg:large",
@@ -79,20 +66,6 @@
       "funciones": [
         {"id": "5-1", "hora": "16:00"},
         {"id": "5-2", "hora": "19:30"}
-      ]
-    },
-    {
-      "id": "6",
-      "titulo": "Avatar: Fire and Ash",
-      "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1438971531555373148/image0.jpg?ex=691acc6b&is=69197aeb&hm=eedab32d1f13dbd99afab6845e83897a6cb9f40dfc1d840ac809884c94164d46",
-      "sinopsis": "Jake Sully y Neytiri se enfrentan a una nueva amenaza: el Pueblo de las Cenizas, un clan agresivo de Na'vi volcánicos.",
-      "duracion": 190,
-      "genero": "Ciencia Ficción, Acción",
-      "clasificacion": "TP",
-      "funciones": [
-        {"id": "6-1", "hora": "14:30"},
-        {"id": "6-2", "hora": "18:00"},
-        {"id": "6-3", "hora": "21:45"}
       ]
     },
     {
@@ -136,19 +109,6 @@
       ]
     },
     {
-      "id": "10",
-      "titulo": "Stranger Things: First Shadow",
-      "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1434210557149450271/image0.jpg?ex=691b46ab&is=6919f52b&hm=1ba4c8a0eb07f06a80755bdfce130256cc83bdbfa2c5766fde8e4b018dd361d2",
-      "sinopsis": "Hawkins, 1959: una ciudad normal con preocupaciones normales, antes de que el mundo se pusiera del revés.",
-      "duracion": 150,
-      "genero": "Drama, Terror",
-      "clasificacion": "TP",
-      "funciones": [
-        {"id": "10-1", "hora": "17:00"},
-        {"id": "10-2", "hora": "20:30"}
-      ]
-    },
-    {
       "id": "11",
       "titulo": "Godzilla Minus One",
       "poster": "https://pbs.twimg.com/media/G4uJ0DubMAAsuyL.jpg:large",
@@ -171,32 +131,6 @@
       "clasificacion": "+18",
       "funciones": [
         {"id": "12-1", "hora": "20:00"}
-      ]
-    },
-    {
-      "id": "13",
-      "titulo": "Stranger Things: Final",
-      "poster": "https://variety.com/wp-content/uploads/2025/10/Stranger-Things-Collage.jpg?crop=0px%2C34px%2C1920px%2C1080px&resize=1000%2C563",
-      "sinopsis": "La conclusión épica de la batalla de Hawkins contra Vecna y el Upside Down.",
-      "duracion": 60,
-      "genero": "Terror, Fantasía",
-      "clasificacion": "+10",
-      "funciones": [
-        {"id": "13-1", "hora": "16:00"},
-        {"id": "13-2", "hora": "18:00"}
-      ]
-    },
-    {
-      "id": "14",
-      "titulo": "Toy Story 5",
-      "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1437915702836334672/Toy-Story-5-poster.png?ex=691ae99a&is=6919981a&hm=553638a95655338c43178977c57519bb3fe019ac256cf7c0f14840065004d74a",
-      "sinopsis": "Woody, Buzz y el resto de la pandilla regresan para enfrentarse a un nuevo desafío: la tecnología.",
-      "duracion": 100,
-      "genero": "Animación, Aventura",
-      "clasificacion": "Todo Público",
-      "funciones": [
-        {"id": "14-1", "hora": "11:30"},
-        {"id": "14-2", "hora": "14:00"}
       ]
     }
   ]

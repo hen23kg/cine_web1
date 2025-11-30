@@ -1,13 +1,11 @@
-// carrito.js - Versión simplificada y probada
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("🛒 Inicializando carrito...");
+    console.log("Inicializando carrito...");
     mostrarCarrito();
 });
 
 function mostrarCarrito() {
-    // Cargar datos del carrito
     const carrito = cargarCarrito();
-    console.log("📦 Datos del carrito:", carrito);
+    console.log("Datos del carrito:", carrito);
 
     if (carrito.asientos && carrito.asientos.length > 0) {
         mostrarCarritoLleno(carrito);
@@ -21,54 +19,50 @@ function cargarCarrito() {
         // 1. Intentar desde sessionStorage primero
         let datos = sessionStorage.getItem("seleccionAsientos");
         if (datos) {
-            console.log("✅ Datos encontrados en sessionStorage");
+            console.log("Datos encontrados en sessionStorage");
             return JSON.parse(datos);
         }
         
         // 2. Intentar desde localStorage como respaldo
         datos = localStorage.getItem("ultimaSeleccion");
         if (datos) {
-            console.log("✅ Datos encontrados en localStorage");
+            console.log("Datos encontrados en localStorage");
             return JSON.parse(datos);
         }
         
     } catch (error) {
-        console.error("❌ Error cargando carrito:", error);
+        console.error("Error cargando carrito:", error);
     }
     
-    console.log("❌ No hay datos del carrito");
+    console.log("No hay datos del carrito");
     return { asientos: [], precioPorAsiento: 45.00 };
 }
 
 function mostrarCarritoVacio() {
-    console.log("📭 Mostrando carrito vacío");
+    console.log("Mostrando carrito vacío");
     
     document.getElementById("cart-empty").style.display = 'block';
     document.getElementById("cart-items").style.display = 'none';
     document.getElementById("cart-summary").style.display = 'none';
     document.getElementById("cart-actions").style.display = 'none';
     
-    // Actualizar contador
     const cartCount = document.querySelector('.cart-count');
     if (cartCount) cartCount.textContent = '0';
 }
 
 function mostrarCarritoLleno(carrito) {
-    console.log("📦 Mostrando carrito con", carrito.asientos.length, "asientos");
+    console.log("Mostrando carrito con", carrito.asientos.length, "asientos");
     
     document.getElementById("cart-empty").style.display = 'none';
     document.getElementById("cart-items").style.display = 'block';
     document.getElementById("cart-summary").style.display = 'block';
     document.getElementById("cart-actions").style.display = 'grid';
     
-    // Actualizar contador
     const cartCount = document.querySelector('.cart-count');
     if (cartCount) cartCount.textContent = carrito.asientos.length;
 
-    // Mostrar items
     mostrarItemsCarrito(carrito);
     
-    // Calcular totales
     calcularTotales(carrito);
 }
 

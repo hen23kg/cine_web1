@@ -1,85 +1,84 @@
-  .confirmacion-container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.confirmacion-container {
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+}
 
-        .confirmacion-title {
-            text-align: center;
-            color: #E50914;
-            margin-bottom: 30px;
-            font-size: 2rem;
-        }
+.confirmacion-title {
+text-align: center;
+color: #E50914;
+margin-bottom: 30px;
+font-size: 2rem;
+}
 
-        .formulario-pago {
-            background: #222;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+.formulario-pago {
+background: #222;
+padding: 30px;
+border-radius: 10px;
+margin-bottom: 20px;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.form-group {
+margin-bottom: 20px;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: white;
-            font-weight: bold;
-        }
+.form-group label {
+display: block;
+margin-bottom: 8px;
+color: white;
+font-weight: bold;
+}
 
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #444;
-            border-radius: 5px;
-            background: #333;
-            color: white;
-            font-size: 1rem;
-        }
+.form-group input {
+width: 100%;
+padding: 12px;
+border: 2px solid #444;
+border-radius: 5px;
+background: #333;
+color: white;
+font-size: 1rem;
+}
 
-        .form-group input:focus {
-            border-color: #E50914;
-            outline: none;
-        }
+.form-group input:focus {
+border-color: #E50914;
+outline: none;
+}
 
-        .resumen-compra {
-            background: #333;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            color: white;
-        }
+.resumen-compra {
+background: #333;
+padding: 20px;
+border-radius: 10px;
+margin-bottom: 20px;
+color: white;
+}
 
-        .resumen-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            padding: 5px 0;
-        }
+.resumen-item {
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+padding: 5px 0;
+}
 
-        .resumen-total {
-            border-top: 2px solid #E50914;
-            padding-top: 10px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #E50914;
-        }
+.resumen-total {
+border-top: 2px solid #E50914;
+padding-top: 10px;
+font-size: 1.2rem;
+font-weight: bold;
+color: #E50914;
+}
 
-        .btn-confirmar {
-            width: 100%;
-            padding: 15px;
-            background: #E50914;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
+.btn-confirmar {
+width: 100%;
+padding: 15px;
+background: #E50914;
+color: white;
+border: none;
+border-radius: 8px;
+font-size: 1.2rem;
+font-weight: bold;
+cursor: pointer;
+}
 
-        .btn-confirmar:hover {
-            background: #b8070f;
-        }
+.btn-confirmar:hover {
+background: #b8070f;
+}

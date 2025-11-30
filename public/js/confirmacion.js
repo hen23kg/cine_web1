@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
             mostrarResumen(datosPago);
         });
 
-        function mostrarResumen(datos) {
+function mostrarResumen(datos) {
             const resumenDiv = document.getElementById('resumenCompra');
             const servicio = datos.total * 0.10;
             const totalFinal = datos.total + servicio;
@@ -48,4 +48,4 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 alert('Por favor completa todos los campos requeridos');
             }
-        }
+ }
