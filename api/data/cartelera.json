@@ -18,7 +18,7 @@
       "id": "1",
       "titulo": "Nada es lo que parece 3",
       "poster": "https://image.tmdb.org/t/p/w500/sMp34cNKjIb18UBOCoAv4DpCxwY.jpg",
-      "sinopsis": "Los Cuatro Jinetes regresan para una nueva generación de magos, llevando la ilusión a nuevos extremos en esta tercera entrega llena de giros.",
+      "sinopsis": "Los Cuatro Jinetes regresan para una nueva generación de magos, llevando la ilusión a nuevos extremos.",
       "duracion": 115,
       "genero": "Suspenso, Thriller",
       "clasificacion": "TP",
@@ -34,7 +34,7 @@
       "poster": "https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
       "sinopsis": "Miles Morales se catapulta a través del Multiverso y se encuentra con un equipo de Spider-Gente encargado de proteger su existencia.",
       "duracion": 140,
-      "genero": "Animación, Acción, Aventura",
+      "genero": "Animación, Acción",
       "clasificacion": "Todo Público",
       "funciones": [
         {"id": "2-1", "hora": "15:00"},
@@ -46,9 +46,9 @@
       "id": "3",
       "titulo": "CoComelon: La Película",
       "poster": "https://variety.com/wp-content/uploads/2021/12/Moonbug-CoComelon.jpg?w=1000&h=563&crop=1",
-      "sinopsis": "JJ y sus amigos se embarcan en aventuras musicales inolvidables llenas de aprendizaje y diversión para los más pequeños.",
+      "sinopsis": "JJ y sus amigos se embarcan en aventuras musicales inolvidables llenas de aprendizaje y diversión.",
       "duracion": 90,
-      "genero": "Animación, Familiar, Musical",
+      "genero": "Infantil, Musical",
       "clasificacion": "Todo Público",
       "funciones": [
         {"id": "3-1", "hora": "11:00"},
@@ -59,8 +59,8 @@
       "id": "4",
       "titulo": "Marty Supreme",
       "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1437815263864033420/MARTY_SUPREME_-_Payoff_Poster.jpg?ex=691b34d0&is=6919e350&hm=b1bae2442f9c65342648117a7a45f889b5ad2ec948c5e327cbc0295316b2b06a",
-      "sinopsis": "Una intensa historia biográfica protagonizada por Timothée Chalamet sobre la leyenda del ping-pong Marty Reisman.",
-      "duracion": 120,
+      "sinopsis": "Una historia original ficticia inspirada en la vida del legendario y excéntrico campeón de tenis de mesa, Marty Reisman.",
+      "duracion": 110,
       "genero": "Drama, Biografía",
       "clasificacion": "+18",
       "funciones": [
@@ -72,161 +72,132 @@
       "id": "5",
       "titulo": "The Mummy (Reestreno)",
       "poster": "https://pbs.twimg.com/media/G475-JzXgAAawdu.jpg:large",
-      "sinopsis": "Un aventurero estadounidense despierta accidentalmente a una momia maldita con poderes sobrenaturales en Egipto.",
+      "sinopsis": "Un aventurero estadounidense despierta accidentalmente a una momia maldita con poderes sobrenaturales.",
       "duracion": 124,
-      "genero": "Aventura, Acción, Fantasía",
+      "genero": "Aventura, Fantasía",
       "clasificacion": "+14",
       "funciones": [
         {"id": "5-1", "hora": "16:00"},
-        {"id": "5-2", "hora": "18:45"}
+        {"id": "5-2", "hora": "19:30"}
       ]
     },
     {
       "id": "6",
       "titulo": "Avatar: Fire and Ash",
       "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1438971531555373148/image0.jpg?ex=691acc6b&is=69197aeb&hm=eedab32d1f13dbd99afab6845e83897a6cb9f40dfc1d840ac809884c94164d46",
-      "sinopsis": "Jake Sully y Neytiri se encuentran con el Pueblo de la Ceniza, un clan de Na'vi agresivo que gravita hacia el fuego.",
-      "duracion": 180,
-      "genero": "Ciencia Ficción, Aventura",
+      "sinopsis": "Jake Sully y Neytiri se enfrentan a una nueva amenaza: el Pueblo de las Cenizas, un clan agresivo de Na'vi volcánicos.",
+      "duracion": 190,
+      "genero": "Ciencia Ficción, Acción",
       "clasificacion": "TP",
       "funciones": [
         {"id": "6-1", "hora": "14:30"},
         {"id": "6-2", "hora": "18:00"},
-        {"id": "6-3", "hora": "21:40"}
+        {"id": "6-3", "hora": "21:45"}
       ]
     },
     {
       "id": "7",
-      "titulo": "Thunderbolts*",
-      "poster": "https://pbs.twimg.com/media/G5keKfcWgAAKAvF.jpg?name=orig",
-      "sinopsis": "Un grupo de antihéroes de Marvel es reclutado por el gobierno para realizar misiones peligrosas.",
-      "duracion": 130,
-      "genero": "Acción, Ciencia Ficción",
-      "clasificacion": "+18",
+      "titulo": "WONKA",
+      "poster": "https://image.tmdb.org/t/p/w500/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
+      "sinopsis": "Armado únicamente con muchos sueños y trabajando muy duro, el joven chocolatero Willy Wonka logra cambiar el mundo.",
+      "duracion": 116,
+      "genero": "Fantasía, Musical",
+      "clasificacion": "+13",
       "funciones": [
-        {"id": "7-1", "hora": "20:00"},
-        {"id": "7-2", "hora": "23:00"}
+        {"id": "7-1", "hora": "13:40"},
+        {"id": "7-2", "hora": "16:10"},
+        {"id": "7-3", "hora": "18:40"}
       ]
     },
     {
       "id": "8",
-      "titulo": "Overcooked: La Película",
-      "poster": "https://deadline.com/wp-content/uploads/2025/11/Overcooked.jpg?w=1024",
-      "sinopsis": "El caos se desata en la cocina mientras un equipo de chefs intenta salvar el Reino de la Cebolla del hambre eterna.",
-      "duracion": 100,
-      "genero": "Animación, Comedia",
-      "clasificacion": "Todo Público",
+      "titulo": "THUNDERBOLTS*",
+      "poster": "https://pbs.twimg.com/media/G5keKfcWgAAKAvF.jpg?name=orig",
+      "sinopsis": "Un grupo de supervillanos y antihéroes reformados es reclutado por el gobierno para realizar operaciones encubiertas.",
+      "duracion": 130,
+      "genero": "Acción, Superhéroes",
+      "clasificacion": "+13",
       "funciones": [
-        {"id": "8-1", "hora": "12:00"},
-        {"id": "8-2", "hora": "14:15"}
+        {"id": "8-1", "hora": "20:15"},
+        {"id": "8-2", "hora": "23:00"}
       ]
     },
     {
       "id": "9",
-      "titulo": "Stranger Things: The First Shadow",
-      "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1434210557149450271/image0.jpg?ex=691b46ab&is=6919f52b&hm=1ba4c8a0eb07f06a80755bdfce130256cc83bdbfa2c5766fde8e4b018dd361d2",
-      "sinopsis": "Hawkins, 1959. Antes de que el mundo se pusiera del revés, una historia sobre los orígenes de Henry Creel.",
-      "duracion": 150,
-      "genero": "Drama, Terror",
-      "clasificacion": "TP",
+      "titulo": "Overcooked: La Película",
+      "poster": "https://deadline.com/wp-content/uploads/2025/11/Overcooked.jpg?w=1024",
+      "sinopsis": "El caos se desata en la cocina mientras un equipo de chefs intenta salvar el Reino de la Cebolla.",
+      "duracion": 100,
+      "genero": "Animación, Comedia",
+      "clasificacion": "Todo Público",
       "funciones": [
-        {"id": "9-1", "hora": "17:00"},
-        {"id": "9-2", "hora": "20:30"}
+        {"id": "9-1", "hora": "12:00"},
+        {"id": "9-2", "hora": "14:15"}
       ]
     },
     {
       "id": "10",
-      "titulo": "Godzilla Minus One",
-      "poster": "https://pbs.twimg.com/media/G4uJ0DubMAAsuyL.jpg:large",
-      "sinopsis": "Japón, devastado tras la guerra, enfrenta una nueva amenaza: Godzilla. ¿Podrá la gente sobrevivir sin nada con qué luchar?",
-      "duracion": 125,
-      "genero": "Acción, Drama, Kaiju",
-      "clasificacion": "Todo Público",
+      "titulo": "Stranger Things: First Shadow",
+      "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1434210557149450271/image0.jpg?ex=691b46ab&is=6919f52b&hm=1ba4c8a0eb07f06a80755bdfce130256cc83bdbfa2c5766fde8e4b018dd361d2",
+      "sinopsis": "Hawkins, 1959: una ciudad normal con preocupaciones normales, antes de que el mundo se pusiera del revés.",
+      "duracion": 150,
+      "genero": "Drama, Terror",
+      "clasificacion": "TP",
       "funciones": [
-        {"id": "10-1", "hora": "15:40"},
-        {"id": "10-2", "hora": "19:10"}
+        {"id": "10-1", "hora": "17:00"},
+        {"id": "10-2", "hora": "20:30"}
       ]
     },
     {
       "id": "11",
-      "titulo": "Oppenheimer (IMAX)",
-      "poster": "https://pbs.twimg.com/media/G3zALCWXUAAvqzB.jpg?name=orig",
-      "sinopsis": "La épica historia del físico J. Robert Oppenheimer y su papel en el desarrollo de la bomba atómica.",
-      "duracion": 180,
-      "genero": "Biografía, Drama, Histórico",
-      "clasificacion": "+18",
+      "titulo": "Godzilla Minus One",
+      "poster": "https://pbs.twimg.com/media/G4uJ0DubMAAsuyL.jpg:large",
+      "sinopsis": "Japón, devastado tras la guerra, enfrenta una nueva amenaza: Godzilla.",
+      "duracion": 125,
+      "genero": "Acción, Drama",
+      "clasificacion": "Todo Público",
       "funciones": [
-        {"id": "11-1", "hora": "20:00"}
+        {"id": "11-1", "hora": "15:40"},
+        {"id": "11-2", "hora": "19:10"}
       ]
     },
     {
       "id": "12",
-      "titulo": "Stranger Things: Temporada Final",
+      "titulo": "Oppenheimer (IMAX)",
+      "poster": "https://pbs.twimg.com/media/G3zALCWXUAAvqzB.jpg?name=orig",
+      "sinopsis": "La historia del físico J. Robert Oppenheimer y su papel en el desarrollo de la bomba atómica.",
+      "duracion": 180,
+      "genero": "Biográfico, Drama",
+      "clasificacion": "+18",
+      "funciones": [
+        {"id": "12-1", "hora": "20:00"}
+      ]
+    },
+    {
+      "id": "13",
+      "titulo": "Stranger Things: Final",
       "poster": "https://variety.com/wp-content/uploads/2025/10/Stranger-Things-Collage.jpg?crop=0px%2C34px%2C1920px%2C1080px&resize=1000%2C563",
       "sinopsis": "La conclusión épica de la batalla de Hawkins contra Vecna y el Upside Down.",
       "duracion": 60,
       "genero": "Terror, Fantasía",
       "clasificacion": "+10",
       "funciones": [
-        {"id": "12-1", "hora": "16:00"},
-        {"id": "12-2", "hora": "18:00"}
+        {"id": "13-1", "hora": "16:00"},
+        {"id": "13-2", "hora": "18:00"}
       ]
-    }
-  ],
-  "preventa": [
-    {
-      "id": "p1",
-      "titulo": "K-Pop: Demon Hunters",
-      "poster": "https://variety.com/wp-content/uploads/2025/10/Kpop-Demon-Hunters-1.webp?w=1000&h=563&crop=1",
-      "sinopsis": "Un grupo de chicas de K-Pop lleva una doble vida cazando demonios en este vibrante filme animado.",
-      "duracion": 130,
-      "genero": "Animación, Acción, Música",
-      "clasificacion": "+14"
     },
     {
-      "id": "p2",
+      "id": "14",
       "titulo": "Toy Story 5",
       "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1437915702836334672/Toy-Story-5-poster.png?ex=691ae99a&is=6919981a&hm=553638a95655338c43178977c57519bb3fe019ac256cf7c0f14840065004d74a",
-      "sinopsis": "Woody, Buzz y la pandilla regresan para enfrentarse al desafío de la tecnología moderna.",
-      "duracion": 110,
-      "genero": "Animación, Aventura, Familiar",
-      "clasificacion": "Todo Público"
-    },
-    {
-      "id": "p3",
-      "titulo": "One Piece: El arco final",
-      "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1432763375598960650/IMG_9189.jpg?ex=691b48e0&is=6919f760&hm=51cebeb18e83057c8d00d533b0dbf749e83398456824e978589791610b0b479b",
-      "sinopsis": "Luffy se acerca al final de su viaje para convertirse en el Rey de los Piratas.",
-      "duracion": 180,
-      "genero": "Anime, Acción, Aventura",
-      "clasificacion": "+10"
-    },
-    {
-      "id": "p4",
-      "titulo": "Empire Odyssey 2026",
-      "poster": "https://images.bauerhosting.com/empire/2025/11/empjan26-cn-odyssey-cover-newsstand.jpg?auto=format&w=1200&q=80",
-      "sinopsis": "Un vistazo exclusivo a los grandes estrenos y superproducciones que llegarán en 2026.",
-      "duracion": 160,
-      "genero": "Documental, Cine",
-      "clasificacion": "TP"
-    },
-    {
-      "id": "p5",
-      "titulo": "Taylor Swift: The Eras Tour (Final)",
-      "poster": "https://cdn.discordapp.com/attachments/539935961652527105/1438965600176046253/IMG_9466.jpg?ex=691ac6e5&is=69197565&hm=727d2e1a2c20b8fa66b1021de643411ffccb5980f25db0f950c1478fa06da229",
-      "sinopsis": "Documental sobre el final de una era: el último show de la gira más grande de la historia.",
-      "duracion": 180,
-      "genero": "Documental, Música",
-      "clasificacion": "+13"
-    },
-    {
-      "id": "p6",
-      "titulo": "Mufasa: El Rey León",
-      "poster": "https://image.tmdb.org/t/p/w500/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
-      "sinopsis": "Rafiki narra la leyenda de Mufasa a la joven Kiara, contando la historia de su ascenso.",
-      "duracion": 118,
-      "genero": "Aventura, Drama, Musical",
-      "clasificacion": "+13"
+      "sinopsis": "Woody, Buzz y el resto de la pandilla regresan para enfrentarse a un nuevo desafío: la tecnología.",
+      "duracion": 100,
+      "genero": "Animación, Aventura",
+      "clasificacion": "Todo Público",
+      "funciones": [
+        {"id": "14-1", "hora": "11:30"},
+        {"id": "14-2", "hora": "14:00"}
+      ]
     }
   ]
 }

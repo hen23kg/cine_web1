@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito</title>
-    <link rel="stylesheet" href="/public/css/carrito.css">
-    <link rel="stylesheet" href="/public/css/index.css">
+    <title>Carrito - CINE-KALAF</title>
+    <link rel="stylesheet" href="./css/carrito.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
+     <header>
         <h1 class="logo">CINE-KALAF</h1>
         <nav class="menu-container">
             <ul class="menu">
-                <li><a href="./login.html"><i class="fas fa-user"></i></a></li>
-                <li><a href="menu.html"><i class="fas fa-utensils"></i></a></li>
-                <li><a href="peliculas.html"><i class="fas fa-film"></i></a></li>
-                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-                <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="pelicula.html"><i class="fas fa-film"></i> Cartelera</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="carrito.html" class="active">
+                    <i class="fas fa-shopping-cart"></i> Carrito
+                    <span class="cart-count">0</span>
+                </a></li>
             </ul>
         </nav>
     </header>
-        <main>
+    
+    <main>
         <div class="cart-content">
             <h1 class="cart-title">Carrito de Entradas</h1>
             
@@ -29,8 +31,8 @@
                 <div class="icon"><i class="fas fa-shopping-cart fa-4x"></i></div>
                 <h2>Tu carrito está vacío</h2>
                 <p>No has seleccionado ningún asiento aún.</p>
-                <a href="asiento.html" class="btn btn-primary" style="margin-top: 20px;">
-                    Seleccionar Asientos
+                <a href="pelicula.html" class="btn btn-primary" style="margin-top: 20px;">
+                    Ver Cartelera
                 </a>
             </div>
             
@@ -54,11 +56,20 @@
             </div>
             
             <div class="actions" id="cart-actions">
-                <a href="asiento.html" class="btn btn-secondary">Modificar Asientos</a>
-                <a href="confirmacion.html" class="btn btn-primary" id="btn-pagar">Proceder al Pago</a>
+                <button onclick="vaciarCarrito()" class="btn btn-secondary">Vaciar Carrito</button>
+                <a href="asiento.html" class="btn btn-secondary">Agregar Más</a>
+                <a href="confirmacion.html"  class="btn btn-primary" id="btn-pagar">Proceder al Pago</button>
             </div>
         </div>
     </main>
-    <script src="/public/js/carrito.js"></script>
+
+    
+    <div style="position: fixed; top: 10px; right: 10px; background: #000; color: #fff; padding: 10px; z-index: 1000; border: 2px solid red;">
+        <button onclick="mostrarDebug()" style="background: #e50914; color: white; border: none; padding: 5px 10px; border-radius: 3px; margin-bottom: 5px;">
+        </button>
+        <div id="debug-info" style="font-size: 12px;"></div>
+    </div>
+
+    <script src="./js/carrito.js"></script>
 </body>
 </html>

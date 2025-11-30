@@ -2,6 +2,51 @@ const precioPorAsiento = 45.00;
 let asientosSeleccionados = [];
 let occupiedSeats = JSON.parse(localStorage.getItem('occupiedSeats')) || ['A1', 'A2', 'B5', 'C3'];
 
+// FUNCIÓN ÚNICA para guardar la selección
+function guardarSeleccionCompleta() {
+    const movieSelection = JSON.parse(sessionStorage.getItem('movieSelection') || '{}');
+    
+    const seleccionCarrito = {
+        // Información de película
+        pelicula: movieSelection.movie?.title || 'Película no especificada',
+        funcion: movieSelection.showtime?.time || 'No especificado',
+        sala: movieSelection.showtime?.sala || 'Sala 1',
+        formato: movieSelection.showtime?.format || '2D',
+        
+        // Información de asientos
+        asientos: asientosSeleccionados.map(seat => seat.id),
+        cantidad: asientosSeleccionados.length,
+        precioPorAsiento: precioPorAsiento,
+        subtotal: asientosSeleccionados.length * precioPorAsiento,
+        servicio: (asientosSeleccionados.length * precioPorAsiento) * 0.10,
+        total: (asientosSeleccionados.length * precioPorAsiento) * 1.10,
+        
+        // Metadata
+        fechaSeleccion: new Date().toISOString(),
+        timestamp: new Date().getTime()
+    };
+    
+    console.log('💾 GUARDANDO EN CARRITO:', seleccionCarrito);
+    
+    // GUARDAR EN AMBOS STORAGES
+    sessionStorage.setItem("seleccionAsientos", JSON.stringify(seleccionCarrito));
+    localStorage.setItem("ultimaSeleccion", JSON.stringify(seleccionCarrito));
+    
+    // ACTUALIZAR CONTADOR INMEDIATAMENTE
+    actualizarContadorCarrito(asientosSeleccionados.length);
+    
+    return seleccionCarrito;
+}
+
+// Función para actualizar contador del carrito
+function actualizarContadorCarrito(cantidad) {
+    const cartCounts = document.querySelectorAll('.cart-count');
+    cartCounts.forEach(count => {
+        count.textContent = cantidad;
+        console.log(`🛒 Contador actualizado: ${cantidad}`);
+    });
+}
+
 function initializeSeats() {
     const rows = document.querySelectorAll(".row");
     const infoDiv = document.getElementById("info");
@@ -20,25 +65,19 @@ function initializeSeats() {
         const letraFila = String.fromCharCode(65 + rowIndex);
 
         seats.forEach((seat, seatIndex) => {
-            // Saltar asientos hidden si existen
             if (seat.classList.contains("hidden")) {
                 return;
             }
-
             const numeroAsiento = seatIndex + 1;
             const idAsiento = `${letraFila}${numeroAsiento}`;
-            
-            // Asignar datos al asiento
             seat.dataset.id = idAsiento;
             seat.dataset.fila = letraFila;
             seat.dataset.numero = numeroAsiento;
 
-            // Marcar asientos ocupados
             if (occupiedSeats.includes(idAsiento)) {
                 seat.classList.add("occupied");
             }
 
-            // Agregar evento de clic
             seat.addEventListener("click", manejarSeleccionAsiento);
         });
     });
@@ -46,17 +85,14 @@ function initializeSeats() {
     function manejarSeleccionAsiento(event) {
         const seat = event.currentTarget;
 
-        // Evitar click en ocupados
         if (seat.classList.contains("occupied")) {
             return;
         }
 
-        // Toggle selección
         seat.classList.toggle("selected");
         const idAsiento = seat.dataset.id;
 
         if (seat.classList.contains("selected")) {
-            // Agregar a la lista
             asientosSeleccionados.push({
                 id: idAsiento,
                 fila: seat.dataset.fila,
@@ -64,11 +100,9 @@ function initializeSeats() {
                 elemento: seat
             });
         } else {
-            // Remover de la lista
             asientosSeleccionados = asientosSeleccionados.filter(asiento => asiento.id !== idAsiento);
         }
 
-        // Actualizar interfaz
         actualizarInterfaz();
     }
 
@@ -76,7 +110,7 @@ function initializeSeats() {
         actualizarInformacion();
         actualizarTotal();
         actualizarBotonContinuar();
-        guardarSeleccionActual();
+        guardarSeleccionCompleta(); // Usar la función única
     }
 
     function actualizarInformacion() {
@@ -87,7 +121,6 @@ function initializeSeats() {
             return;
         }
 
-        // Ordenar asientos
         asientosSeleccionados.sort((a, b) => {
             if (a.fila !== b.fila) return a.fila.localeCompare(b.fila);
             return a.numero - b.numero;
@@ -133,46 +166,38 @@ function initializeSeats() {
         }
     }
 
-    function guardarSeleccionActual() {
-        const seleccion = {
-            asientos: asientosSeleccionados.map(seat => seat.id),
-            total: asientosSeleccionados.length * precioPorAsiento,
-            cantidad: asientosSeleccionados.length,
-            precioPorAsiento: precioPorAsiento,
-            timestamp: new Date().getTime()
-        };
-        
-        // Guardar en sessionStorage para el carrito
-        sessionStorage.setItem("seleccionAsientos", JSON.stringify(seleccion));
-        
-        // También guardar en localStorage para persistencia
-        localStorage.setItem("ultimaSeleccion", JSON.stringify(seleccion));
-    }
-
     function cargarSeleccionPrevia() {
         const seleccionGuardada = sessionStorage.getItem("seleccionAsientos") || localStorage.getItem("ultimaSeleccion");
+        
         if (seleccionGuardada) {
-            const seleccion = JSON.parse(seleccionGuardada);
-            
-            // Cargar asientos seleccionados
-            seleccion.asientos.forEach(idAsiento => {
-                const seat = document.querySelector(`.seat[data-id="${idAsiento}"]`);
-                if (seat && !seat.classList.contains("occupied")) {
-                    seat.classList.add("selected");
-                    asientosSeleccionados.push({
-                        id: idAsiento,
-                        fila: seat.dataset.fila,
-                        numero: seat.dataset.numero,
-                        elemento: seat
+            try {
+                const seleccion = JSON.parse(seleccionGuardada);
+                console.log('📥 Cargando selección previa:', seleccion);
+                
+                if (seleccion.asientos && seleccion.asientos.length > 0) {
+                    seleccion.asientos.forEach(idAsiento => {
+                        const seat = document.querySelector(`.seat[data-id="${idAsiento}"]`);
+                        if (seat && !seat.classList.contains("occupied")) {
+                            seat.classList.add("selected");
+                            asientosSeleccionados.push({
+                                id: idAsiento,
+                                fila: seat.dataset.fila,
+                                numero: seat.dataset.numero,
+                                elemento: seat
+                            });
+                        }
                     });
+                    
+                    actualizarInterfaz();
+                    console.log(`✅ ${seleccion.asientos.length} asientos cargados de selección previa`);
                 }
-            });
-            
-            actualizarInterfaz();
+            } catch (error) {
+                console.error('❌ Error cargando selección previa:', error);
+            }
         }
     }
 
-    // Configurar evento del botón continuar si existe
+    // Configurar evento del botón continuar
     if (continueBtn) {
         continueBtn.addEventListener("click", function(e) {
             if (asientosSeleccionados.length === 0) {
@@ -181,27 +206,20 @@ function initializeSeats() {
                 return;
             }
 
-            // Guardar selección completa
-            const movieSelection = JSON.parse(sessionStorage.getItem('movieSelection') || '{}');
-            const seleccionCompleta = {
-                ...movieSelection,
-                asientos: asientosSeleccionados.map(seat => seat.id),
-                totalTickets: asientosSeleccionados.length,
-                totalPrice: asientosSeleccionados.length * precioPorAsiento,
-                precioPorAsiento: precioPorAsiento,
-                fechaSeleccion: new Date().toISOString()
-            };
+            console.log('🚀 GUARDANDO Y REDIRIGIENDO...');
             
-            sessionStorage.setItem('movieSelection', JSON.stringify(seleccionCompleta));
-            sessionStorage.setItem('seleccionAsientos', JSON.stringify({
-                asientos: asientosSeleccionados.map(seat => seat.id),
-                total: asientosSeleccionados.length * precioPorAsiento,
-                cantidad: asientosSeleccionados.length,
-                precioPorAsiento: precioPorAsiento
-            }));
-
-            // Redirigir al carrito
-            window.location.href = 'carrito.html';
+            // 1. Guardar primero
+            guardarSeleccionCompleta();
+            
+            // 2. Pequeña pausa para asegurar el guardado
+            setTimeout(() => {
+                // 3. Verificar que se guardó
+                const verificar = sessionStorage.getItem("seleccionAsientos");
+                console.log('✅ Verificación:', verificar ? 'GUARDADO' : 'NO GUARDADO');
+                
+                // 4. Redirigir
+                window.location.href = 'carrito.html';
+            }, 200);
         });
     }
 }
@@ -216,66 +234,59 @@ function showMovieSummary() {
         summaryDiv.innerHTML = `
             <h3>${selection.movie.title || 'Película no especificada'}</h3>
             <p><strong>Horario:</strong> ${selection.showtime?.time || 'No especificado'} - ${selection.showtime?.format || 'Estándar'}</p>
+            <p><strong>Sala:</strong> ${selection.showtime?.sala || 'No especificada'}</p>
             <p><strong>Duración:</strong> ${selection.movie.duration || 'No especificada'} | <strong>Clasificación:</strong> ${selection.movie.rating || 'No especificada'}</p>
             <p><strong>Precio por asiento:</strong> Bs${precioPorAsiento}.00</p>
         `;
-        
-        // Guardar información de la película para el carrito
-        const carritoData = {
-            pelicula: selection.movie.title || 'Película no especificada',
-            funcion: selection.showtime?.time || 'No especificado',
-            formato: selection.showtime?.format || 'Estándar',
-            duracion: selection.movie.duration || 'No especificada',
-            clasificacion: selection.movie.rating || 'No especificada',
-            precioPorAsiento: precioPorAsiento
-        };
-        sessionStorage.setItem("infoPelicula", JSON.stringify(carritoData));
     } else {
-        // Datos por defecto si no hay selección de película
         summaryDiv.innerHTML = `
             <h3>Película no especificada</h3>
             <p><strong>Horario:</strong> No especificado</p>
             <p><strong>Precio por asiento:</strong> Bs${precioPorAsiento}.00</p>
         `;
-        
-        const carritoData = {
-            pelicula: 'Película no especificada',
-            funcion: 'No especificado',
-            formato: 'Estándar',
-            precioPorAsiento: precioPorAsiento
-        };
-        sessionStorage.setItem("infoPelicula", JSON.stringify(carritoData));
     }
 }
 
-// Función global para continuar al carrito (para enlaces HTML)
+// Función global para continuar al carrito
 function continueToCarrito() {
     if (asientosSeleccionados.length === 0) {
         alert("Por favor selecciona al menos un asiento");
         return false;
     }
 
-    // Guardar selección completa
-    const movieSelection = JSON.parse(sessionStorage.getItem('movieSelection') || '{}');
-    const seleccionCompleta = {
-        ...movieSelection,
-        asientos: asientosSeleccionados.map(seat => seat.id),
-        totalTickets: asientosSeleccionados.length,
-        totalPrice: asientosSeleccionados.length * precioPorAsiento,
-        precioPorAsiento: precioPorAsiento,
-        fechaSeleccion: new Date().toISOString()
-    };
+    // Guardar selección final
+    guardarSeleccionCompleta();
     
-    sessionStorage.setItem('movieSelection', JSON.stringify(seleccionCompleta));
-    sessionStorage.setItem('seleccionAsientos', JSON.stringify({
-        asientos: asientosSeleccionados.map(seat => seat.id),
-        total: asientosSeleccionados.length * precioPorAsiento,
-        cantidad: asientosSeleccionados.length,
-        precioPorAsiento: precioPorAsiento
-    }));
-
+    console.log('🚀 Continuando al carrito con', asientosSeleccionados.length, 'asientos');
+    
+    // Pequeño delay para asegurar que se guarde
+    setTimeout(() => {
+        window.location.href = 'carrito.html';
+    }, 100);
+    
     return true;
 }
 
 // Inicializar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', initializeSeats);
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🎬 Inicializando página de asientos...');
+    initializeSeats();
+    
+    // Verificar si hay datos de película
+    const movieSelection = sessionStorage.getItem('movieSelection');
+    if (!movieSelection) {
+        console.warn('⚠️ No hay selección de película. Redirigiendo a cartelera...');
+        setTimeout(() => {
+            window.location.href = 'pelicula.html';
+        }, 2000);
+    }
+});
+
+// Función de debug para verificar datos
+window.mostrarDatosAsientos = function() {
+    console.log('🔍 DEBUG - Datos actuales:');
+    console.log('Asientos seleccionados:', asientosSeleccionados);
+    console.log('SessionStorage:', sessionStorage.getItem("seleccionAsientos"));
+    console.log('LocalStorage:', localStorage.getItem("ultimaSeleccion"));
+    console.log('MovieSelection:', sessionStorage.getItem("movieSelection"));
+};

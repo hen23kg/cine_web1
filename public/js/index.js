@@ -33,23 +33,23 @@ const moviesData = {
             cast: "Animación",
             synopsis: "JJ y sus amigos se embarcan en aventuras musicales inolvidables llenas de aprendizaje y diversión."
         },
-        {
+       {
             id: 4,
             title: "Marty Supreme",
             image: "https://cdn.discordapp.com/attachments/539935961652527105/1437815263864033420/MARTY_SUPREME_-_Payoff_Poster.jpg?ex=691b34d0&is=6919e350&hm=b1bae2442f9c65342648117a7a45f889b5ad2ec948c5e327cbc0295316b2b06a",
             rating: "+18",
-            ratingColor: "#d9534f", // Color sugerido para +18
-            duration: "Por confirmar",
+            ratingColor: "#d9534f", 
+            duration: "1h 50m", 
             director: "Josh Safdie",
-            cast: "Timothée Chalamet, Gwyneth Paltrow",
-            synopsis: "Una película biográfica ficticia inspirada en el jugador de tenis de mesa Marty Reisman."
+            cast: "Timothée Chalamet, Gwyneth Paltrow, Tyler, the Creator",
+            synopsis: "Una historia original ficticia inspirada en la vida del legendario y excéntrico campeón de tenis de mesa (ping-pong), Marty Reisman."
         },
         {
             id: 5,
             title: "The Mummy (Reestreno)",
             image: "https://pbs.twimg.com/media/G475-JzXgAAawdu.jpg:large",
             rating: "+14",
-            ratingColor: "#f0ad4e", // Color sugerido para +14
+            ratingColor: "#f0ad4e",
             duration: "2h 04m",
             director: "Stephen Sommers",
             cast: "Brendan Fraser, Rachel Weisz",
@@ -61,21 +61,21 @@ const moviesData = {
             image: "https://cdn.discordapp.com/attachments/539935961652527105/1438971531555373148/image0.jpg?ex=691acc6b&is=69197aeb&hm=eedab32d1f13dbd99afab6845e83897a6cb9f40dfc1d840ac809884c94164d46",
             rating: "TP",
             ratingColor: "#007bff",
-            duration: "Por confirmar",
+            duration: "3h 10m",
             director: "James Cameron",
-            cast: "Sam Worthington, Zoe Saldaña",
-            synopsis: "Jake Sully y Neytiri se encuentran con el Pueblo de la Ceniza, un clan de Na'vi que gravita hacia el fuego."
+            cast: "Sam Worthington, Zoe Saldaña, Sigourney Weaver, Stephen Lang, Oona Chaplin",
+            synopsis: "Jake Sully y Neytiri se enfrentan a una nueva amenaza: el Pueblo de las Cenizas, un clan agresivo de Na'vi volcánicos que mostrará el lado más oscuro de Pandora."
         },
         {
             id: 7,
-            title: "Thunderbolts*",
+            title: "IN THEARES MAY1",
             image: "https://pbs.twimg.com/media/G5keKfcWgAAKAvF.jpg?name=orig",
-            rating: "+18",
-            ratingColor: "#d9534f",
-            duration: "Por confirmar",
+            rating: "+13",
+            ratingColor: "#f0ad4e", 
+            duration: "2h 10m",     
             director: "Jake Schreier",
-            cast: "Florence Pugh, Sebastian Stan, David Harbour",
-            synopsis: "Un grupo de antihéroes es enviado a misiones por el gobierno."
+            cast: "Florence Pugh, Sebastian Stan, David Harbour, Wyatt Russell, Julia Louis-Dreyfus",
+            synopsis: "Un grupo de supervillanos y antihéroes reformados es reclutado por el gobierno para realizar operaciones encubiertas de alto riesgo."
         },
         {
             id: 8,
@@ -84,9 +84,9 @@ const moviesData = {
             rating: "Todo Público",
             ratingColor: "#5cb85c",
             duration: "1h 40m",
-            director: "Por confirmar",
-            cast: "Animación",
-            synopsis: "El caos se desata en la cocina mientras un equipo de chefs intenta salvar el Reino de la Cebolla."
+            director: "Ghost Town Games",
+            cast: "Animación, El Rey Cebolla, Kevin",
+            synopsis: "El caos se desata en la cocina. Los chefs deben unirse para salvar el Reino de la Cebolla de una antigua maldición comestible, cocinando en los entornos más peligrosos y absurdos jamás vistos."
         },
         {
             id: 9,
@@ -151,10 +151,10 @@ const moviesData = {
             image: "https://cdn.discordapp.com/attachments/539935961652527105/1437915702836334672/Toy-Story-5-poster.png?ex=691ae99a&is=6919981a&hm=553638a95655338c43178977c57519bb3fe019ac256cf7c0f14840065004d74a",
             rating: "Todo Público",
             ratingColor: "#5cb85c",
-            duration: "Por confirmar",
+            duration: "1h 40m",
             director: "Andrew Stanton",
             cast: "Tom Hanks, Tim Allen",
-            synopsis: "Woody, Buzz y la pandilla regresan para enfrentarse al desafío de la tecnología moderna."
+            synopsis: "Woody, Buzz y el resto de la pandilla regresan para enfrentarse a un nuevo desafío: la tecnología. Los juguetes tendrán que competir contra tablets y dispositivos electrónicos para recuperar la atención de los niños."
         },
         {
             id: 15,
@@ -162,7 +162,7 @@ const moviesData = {
             image: "https://cdn.discordapp.com/attachments/539935961652527105/1432763375598960650/IMG_9189.jpg?ex=691b48e0&is=6919f760&hm=51cebeb18e83057c8d00d533b0dbf749e83398456824e978589791610b0b479b",
             rating: "+10",
             ratingColor: "#f0ad4e",
-            duration: "Por confirmar",
+            duration: "2h",
             director: "Eiichiro Oda (Supervisor)",
             cast: "Mayumi Tanaka, Kazuya Nakai",
             synopsis: "Luffy se acerca al final de su viaje para convertirse en el Rey de los Piratas."
@@ -173,10 +173,10 @@ const moviesData = {
             image: "https://images.bauerhosting.com/empire/2025/11/empjan26-cn-odyssey-cover-newsstand.jpg?auto=format&w=1200&q=80",
             rating: "TP",
             ratingColor: "#007bff",
-            duration: "N/A",
-            director: "Varios",
-            cast: "Varios",
-            synopsis: "Un vistazo exclusivo a los grandes estrenos que llegarán en 2026."
+            duration: "",
+            director: "",
+            cast: "",
+            synopsis: ""
         },
         {
             id: 17,
@@ -190,15 +190,15 @@ const moviesData = {
             synopsis: "Documental sobre el final de una era: el último show de la gira más grande de la historia."
         },
         {
-            id: 18,
-            title: "Mufasa: El Rey León",
+            id: "7",
+            title: "WONKA",
             image: "https://image.tmdb.org/t/p/w500/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
             rating: "+13",
-            ratingColor: "#f0ad4e", // Asumido por contexto, en tu HTML no tenía color
-            duration: "1h 58m",
-            director: "Barry Jenkins",
-            cast: "Aaron Pierre, Kelvin Harrison Jr.",
-            synopsis: "Rafiki narra la leyenda de Mufasa a la joven cachorro de león Kiara, contando la historia de su ascenso."
+            ratingColor: "#f0ad4e", 
+            duration: "1h 56m",
+            director: "Paul King",
+            cast: "Timothée Chalamet, Calah Lane, Hugh Grant, Olivia Colman, Rowan Atkinson",
+            synopsis: "Armado únicamente con muchos sueños y trabajando muy duro, el joven chocolatero Willy Wonka logra cambiar el mundo, un bocado delicioso a la vez."
         }
     ]
 };

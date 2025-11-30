@@ -1,31 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMPRA DE TICKET - CINE-KALAF</title>
+    <title>Cartelera o Pelicula- CINE-KALAF</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/peliculas.css">
+    <link rel="stylesheet" href="./css/pelicula.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header>
+     <header>
         <h1 class="logo">CINE-KALAF</h1>
         <nav class="menu-container">
             <ul class="menu">
-                <li><a href="./login.html"><i class="fas fa-user"></i></a></li>
-                <li><a href="menu.html"><i class="fas fa-utensils"></i></a></li>
-                <li><a href="peliculas.html"><i class="fas fa-film"></i></a></li>
+                <li><a href="pelicula.html"><i class="fas fa-film"></i></a></li>
                 <li><a href="index.html"><i class="fas fa-home"></i></a></li>
                 <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-        <div class="page-container">
+        <div>
+            <h2>EN CARTELERA</h2>
             <section class="movie-listings" id="movieListings">
-                <!-- Las películas se cargan dinámicamente aquí -->
+                <article class="movie-card">
+                    <div class="movie-poster">
+                        <img src="https://via.placeholder.com/300x450/333/fff?text=NADA+ES+LO+QUE+PARECE+3" alt="">
+                    </div>
+                    <div class="movie-info">
+                        <h3>NADA ES LO QUE PARECE 3</h3>
+                        <div class="movie-tags">
+                            <span class="tag" style="background-color: #28a745;">
+                                TP
+                            </span>
+                            <span class="tag" style="background-color: #6c757d;">
+                                1h 55m
+                            </span>
+                            <span class="tag" style="background-color: #17a2b8;">
+                                Acción
+                            </span>
+                        </div>
+                        <div class="movie-details">
+                            <p><strong>1h 55m | TP</strong></p>
+                            <p><strong>Género:</strong> Acción</p>
+                            <p class="sinopsis">Los Cuatro Jinetes regresan para una nueva generación de magos, llevando la ilusión a nuevos extremos.</p>
+                        </div>
+                    </div>
+                </article>
             </section>
         </div>
     </main>
