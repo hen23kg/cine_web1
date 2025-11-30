@@ -75,7 +75,7 @@ margin: 0;
     display: none;
 }
 .carousel-section img {
-    width: 100%;
+    width: 50%;
     flex-shrink: 0;
     scroll-snap-align: center;
     aspect-ratio: 16 / 9;
